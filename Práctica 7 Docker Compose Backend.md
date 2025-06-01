@@ -72,6 +72,8 @@ Además, se investigó la técnica de **multi-stage builds** en Docker, descrita
 **Paso 1:** Crear el archivo `.env` en el directorio raíz del proyecto con las variables de entorno necesarias para los servicios PostgreSQL y pgAdmin. Esto permite separar las credenciales del código fuente.
 
 **Figura 2.** _"Archivo `.env` con las variables de entorno"_
+
+
 <img width="576" alt="f2" src="https://github.com/user-attachments/assets/5ca793c8-4f1e-41e9-a526-a47bf1d80122" />
 
 
