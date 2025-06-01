@@ -65,12 +65,14 @@ Además, se investigó la técnica de **multi-stage builds** en Docker, descrita
 
 **Figura 1.** _"Clonado del repositorio backend"_
 
+<img width="995" alt="f1" src="https://github.com/user-attachments/assets/ea9c7553-a6f8-4968-bba4-616e2502ba04" />
 
 ---
 
 **Paso 1:** Crear el archivo `.env` en el directorio raíz del proyecto con las variables de entorno necesarias para los servicios PostgreSQL y pgAdmin. Esto permite separar las credenciales del código fuente.
 
 **Figura 2.** _"Archivo `.env` con las variables de entorno"_
+<img width="576" alt="f2" src="https://github.com/user-attachments/assets/5ca793c8-4f1e-41e9-a526-a47bf1d80122" />
 
 
 ---
@@ -79,12 +81,16 @@ Además, se investigó la técnica de **multi-stage builds** en Docker, descrita
 
 **Figura 3.** _"Configuración de los servicios en `docker-compose.yml`"_
 
+<img width="594" alt="f3-1" src="https://github.com/user-attachments/assets/f322be67-6303-4fd5-bc9b-3b584c1214b9" />  _
+<img width="572" alt="f3-2" src="https://github.com/user-attachments/assets/e5cecc4d-5516-40c2-97a3-12ec2dd9392c" />  _
+<img width="580" alt="f3-3" src="https://github.com/user-attachments/assets/bf3e08c3-c457-4a2b-a16a-2e5819382e0f" />  -
 
 ---
 
 **Paso 3:** Crear un archivo `Dockerfile` dentro del proyecto backend utilizando la técnica de **multi-stage builds**. En la primera etapa se compila la aplicación usando Java SDK, y en la segunda se copia solo el artefacto a una imagen ligera basada en JRE.
 
 **Figura 4.** _"Estructura del Dockerfile con multi-stage builds"_
+<img width="590" alt="f4" src="https://github.com/user-attachments/assets/9406fe4a-82a7-4323-9126-191e960b04ea" />
 
 ---
 
@@ -93,6 +99,7 @@ Además, se investigó la técnica de **multi-stage builds** en Docker, descrita
 `docker-compose up --build -d`
 
 **Figura 5.** _"Ejecución de Docker Compose para levantar los servicios"_
+<img width="980" alt="f5" src="https://github.com/user-attachments/assets/02681de8-db65-4851-bfa9-df98edd5e2f3" />
 
 
 ---
@@ -101,6 +108,7 @@ Además, se investigó la técnica de **multi-stage builds** en Docker, descrita
 
 **Figura 6.** _"Verificación de contenedores en ejecución"_
 
+<img width="1091" alt="f6" src="https://github.com/user-attachments/assets/eb7f9b1f-f5b7-42d2-94c8-5edc11725c78" />
 
 ---
 
@@ -108,12 +116,15 @@ Además, se investigó la técnica de **multi-stage builds** en Docker, descrita
 
 **Figura 7.** _"Acceso al panel pgAdmin y conexión al servicio PostgreSQL"_
 
+<img width="1448" alt="f7" src="https://github.com/user-attachments/assets/54790294-d61c-44b8-9714-df7105f0ee85" />
 
 ---
 
 **Paso 7:** Verificar que la aplicación backend funciona correctamente accediendo al puerto correspondiente (por ejemplo `http://localhost:8081`) y probando alguna ruta del API (como `/users` si existe). 
 
 **Figura 8.** _"Verificación del funcionamiento del backend desde el navegador "_
+
+<img width="1333" alt="f8" src="https://github.com/user-attachments/assets/104a5389-3314-48df-a4c1-412431281988" />
 
 
 ## 9. Resultados esperados
@@ -128,7 +139,7 @@ Al acceder al panel de pgAdmin en `http://localhost:5050`, se pudo conectar sin 
 
 Este entorno local con Docker Compose proporciona una solución reproducible y fácil de mantener para el desarrollo y prueba de aplicaciones backend con base de datos, mejorando la automatización y eficiencia en el ciclo de desarrollo.
 
-## 10. Referencias (formato APA 7ª edición)
+## 10. Referencias 
 
 Docker Inc. (2025). _Docker: Documentation_. Recuperado de [https://docs.docker.com](https://docs.docker.com)
 
